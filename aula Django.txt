@@ -1,0 +1,17 @@
+Criando ambiente(python 3) no venv:
+	- python3 -m venv meuenv
+
+Acessando o ambiente:
+	- .(dentro do diretório) meuenv/bin/activate
+
+Criando Projeto:
+	- django-admin.py startproject nome_projeto
+
+Start Projeto:
+	- python manage.py runserver
+
+Start squile3:
+	- ./manage.py migrate --run-syncdb
+
+Criando um modulo no Projeto:
+	- python manage.py startapp nome_novo_modulo
