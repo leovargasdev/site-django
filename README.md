@@ -57,3 +57,22 @@ Criando um módulo no projeto:
 ```sh
     $ python manage.py startapp nome_novo_modulo
 ```
+
+Incluindo o novo modulo e verifica a configuração do INSTALLED_APPS:
+
+```sh
+    $ python manage.py makemigrations polls
+    $ python manage.py migrate
+```
+
+Ver a configuração das tabelas:
+
+```sh
+    $ python manage.py sqlmigrate polls 0001
+```
+
+Prompt de comando para debug:
+
+```sh
+    $ python manage.py shell
+```
