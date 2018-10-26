@@ -1,7 +1,11 @@
+<h4>
+    Nova questão, clique <a href="{% url 'polls:form' %}">aqui</a>
+</h4>
+<br>
 {% if latest_question_list %}
     <ul>
     {% for question in latest_question_list %}
-        <li><a href="{% url 'detail' question.id %}">{{ question.question_text }}</a></li>
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
     {% endfor %}
     </ul>
 {% else %}
