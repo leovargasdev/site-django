@@ -1,0 +1,27 @@
+<h2>Blog de piadas</h2>
+
+<h3>Lista de paidas</h3>
+
+{% if piadas %}
+    <ul>
+    {% for p in piadas %}
+        <li>
+            <h4>
+                {{ p.titulo }}
+            </h4>
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <h5>Sem piadas cadastradas</h5>
+{% endif %}
+
+<p>
+    Cadastro piada <a href="{% url 'blog:novaPiada' %}">aqui</a>
+</p>
+
+<!-- <ul>
+    <li>p1</li>
+    <li>p2</li>
+    <li>p3</li>
+</ul> -->

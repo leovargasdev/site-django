@@ -1,0 +1,30 @@
+<a href="{% url 'blog:index' %}">Voltar home</a>
+<center>
+    <h1>Cadastro Nova Piada</h1>
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <!-- TITULO PIADA -->
+        <label for="titulo">Título piada</label>
+        <input style="width:20%; margin-bottom:10px" type="text" name="titulo">
+        <br>
+        <!-- CONTEUDO -->
+        <label for="conteudo">Conteúdo piada</label>
+        <input style="width:20%; margin-bottom:10px" type="text" name="conteudo">
+        <br>
+        <!-- CATEGORIA -->
+        <label for="categoria">Categoria</label>
+        <select name="categoria">
+            <option value="loira">Loira</option>
+            <option value="gordo">Gordo</option>
+            <option value="comunista">Comunista</option>
+            <option value="anao">Anão</option>
+        </select>
+        <br>
+        <!-- BTN SUBMIT -->
+        <button type="submit" name="button" style="background-color: #008c9a; font-size: 16px; padding: 5px; width:15%; height: 30px; margin: 10px auto">
+            Cadastrar
+        </button>
+    </form>
+</center>
