@@ -13,16 +13,15 @@ def cadastro(request):
         p.conteudo = inputs['conteudo']
         p.categoria = inputs['categoria']
         p.save()
-        return redirect('/blog')
+        return redirect('blog:index')
     context = ""
     template = 'cadastro_piada.html'
     return render(request, template, None)
 
 def index(request):
-    result = Piada.objects
-    print (result)
-    # for r in result:
-    #     print(r)
+    result = Piada.objects.all()
+    for r in result:
+        print(r.titulo)
     perdi = [{'titulo': "abacaxi"}, {'titulo': "teste"}, {'titulo': "carro"}, {'titulo': "super"}]
     context = {'piadas': perdi}
     template = 'index.html'
